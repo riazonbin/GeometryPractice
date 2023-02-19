@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryTestProject", "GeometryTestProject\GeometryTestProject.csproj", "{A05954AD-A323-4A6F-B49D-A39E33B1B102}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "GeometryTestProject\TestProject.csproj", "{A05954AD-A323-4A6F-B49D-A39E33B1B102}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryPracticeLibrary", "GeometryPracticeLibrary\GeometryPracticeLibrary.csproj", "{281FB08D-57A3-4F72-BBD9-EFB6075C5F68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PracticeLibrary", "GeometryPracticeLibrary\PracticeLibrary.csproj", "{281FB08D-57A3-4F72-BBD9-EFB6075C5F68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

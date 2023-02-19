@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GeometryPracticeLibrary
+namespace PracticeLibrary
 {
     public class Geometry
     {

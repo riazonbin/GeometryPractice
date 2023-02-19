@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeometryPracticeLibrary\GeometryPracticeLibrary.csproj" />
+    <ProjectReference Include="..\GeometryPracticeLibrary\PracticeLibrary.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
-using GeometryPracticeLibrary;
+using PracticeLibrary;
 using System;
 using Xunit;
 
-namespace GeometryTestProject
+namespace TestProject
 {
     public class GeometryTest
     {
@@ -14,7 +14,6 @@ namespace GeometryTestProject
             int expected = 15;
             Geometry geometry = new Geometry();
             int actual = geometry.RectangleArea(a, b);
-
 
             Assert.Equal(expected, actual);
         }

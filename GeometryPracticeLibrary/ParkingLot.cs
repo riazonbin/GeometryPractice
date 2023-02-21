@@ -32,9 +32,9 @@ namespace PracticeLibrary
             return carsList.Where(x => x.IsParked == false).ToList();
         }
 
-        public KeyValuePair<int, Car> GetCarOnParkLotByLicensePlate(string licensePlate)
+        public KeyValuePair<int, Car>? GetCarOnParkLotByLicensePlate(string licensePlate)
         {
-            return ParkedCars.Where(x => x.Value.LicensePlate == licensePlate).FirstOrDefault();
+            return ParkedCars.FirstOrDefault(x => x.Value.LicensePlate == licensePlate);
         }
 
         public Car GetCarByParkingSpaceNumber(int parkingSpaceNumber)
@@ -104,15 +104,15 @@ namespace PracticeLibrary
 
         public void UnparkCar(string licensePlate)
         {
-            KeyValuePair<int, Car> car = GetCarOnParkLotByLicensePlate(licensePlate);
+            KeyValuePair<int, Car>? car = GetCarOnParkLotByLicensePlate(licensePlate);
 
-            if (car.Value == null)
+            if (car?.Value is null || car is null)
             {
                 return;
             }
 
-            ParkedCars.Remove(car.Key);
-            car.Value.IsParked = false;
+            ParkedCars.Remove(car.Value.Key);
+            car.Value.Value.IsParked = false;
         }
 
         public bool CheckParkingPlaceCorrectness(int parkingSpaceNumber)

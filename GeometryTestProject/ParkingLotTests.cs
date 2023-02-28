@@ -227,5 +227,29 @@ namespace TestProject
 
             Assert.Equal(expectedCar, parkingLot.GetCarByParkingSpaceNumber(2));
         }
+
+        [Fact]
+        public void GetCarByOwnerName_ListOfParkedAndUnparkedCars_ShouldReturnCars()
+        {
+            var parkingLot = new ParkingLot(10);
+
+            var car1 = new Car("A123ПР", "Иванов", "черный");
+            var car2 = new Car("К422АЗ", "Петров", "белый");
+            var car3 = new Car("Е219АП", "Баширов", "серый");
+            var car4 = new Car("А001АА", "Иванов", "синий");
+
+            parkingLot.ParkCar(car1);
+            parkingLot.ParkCar(car2);
+            parkingLot.ParkCar(car3);
+            parkingLot.ParkCar(car4);
+
+            var expectedResult = new Dictionary<int, Car>()
+            {
+                {1, car1 },
+                {4, car4 }
+            };
+
+            Assert.Equal(expectedResult, parkingLot.GetCarsByOwnerNameOnParkingLot("Иванов"));
+        }
     }
 }

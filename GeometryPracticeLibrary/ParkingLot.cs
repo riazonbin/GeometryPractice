@@ -50,6 +50,12 @@ namespace PracticeLibrary
             catch { return null; }
         }
 
+        public Dictionary<int, Car> GetCarsByOwnerNameOnParkingLot(string ownerName)
+        {
+            var result = (ParkedCars.Where(x => x.Value.Owner == ownerName).ToDictionary(kvp => kvp.Key, kvp => kvp.Value));
+            return result;
+        }
+
         public void ParkCar(Car car)
         {
             if(GetAvailableSpacesCount() == 0)
